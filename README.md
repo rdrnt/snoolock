@@ -1,7 +1,7 @@
 #Snoolock
-Adds a page to your lockscreen via LockPages, where you can review reddit post from your desired subreddit.
+Adds a page to your lockscreen via LockPages, where you can view reddit post from your desired subreddit.
 
-I uploaded this for people to learn from, but provide credit where it is due, if you base your work off of it, and don't repackage the code and call it your own.
+I uploaded this for people to learn from, but provide credit where it's due (please) if you base your work off of it. And don't repackage the code and call it your own, that's not cool.
 
 Yes, this code sucks. I originally created it for myself, and didn't really care about formatting or optimizing (It runs fine, though). Feel free to contribute if it bothers you.
 

@@ -173,8 +173,14 @@ NSString *settingsPath = @"/var/mobile/Library/Preferences/com.rdrnt.snoolock.pl
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSString *url = [NSString stringWithFormat:@"https://www.reddit.com/r/jailbreak/%@", [jsonDataID objectAtIndex:indexPath.row]];
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    NSMutableDictionary *prefs = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
+    NSString *subDesired = [NSString stringWithFormat:@"%@", prefs[@"subredditTitle"]];
+    if (subDesired == nil || [subDesired isEqual:@""]) {
+        subDesired = [NSString stringWithFormat:@"all"];
+    }
+    NSString *url = [NSString stringWithFormat:@"https://www.reddit.com/r/%@/%@", subDesired, [jsonDataID objectAtIndex:indexPath.row]];
+    SFSafariViewController *sfVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url] entersReaderIfAvailable:NO];
+    [self presentViewController:sfVC animated:YES completion:nil];
 }
 
 @end

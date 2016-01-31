@@ -1,10 +1,10 @@
 Package: com.rdrnt.snoolock
 Name: snoolock
-Depends: mobilesubstrate com.dba-tech.lockpages
+Depends: mobilesubstrate, com.dba-tech.lockpages
 Architecture: iphoneos-arm
 Description: Adds reddit to your Lockscreen!
 Maintainer: rdrnt
 Author: rdrnt
 Section: Tweaks
-Version: 0.0.1-203+debug
+Version: 0.0.1-208+debug
 Installed-Size: 516

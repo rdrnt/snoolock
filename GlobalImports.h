@@ -7,3 +7,4 @@
 #import <Accelerate/Accelerate.h>
 #import <UIKit/UIView.h>
 #import <QuartzCore/QuartzCore.h>
+#import <SafariServices/SafariServices.h>
